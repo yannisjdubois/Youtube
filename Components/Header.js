@@ -19,7 +19,7 @@ export default Index
 const styles = StyleSheet.create({
     header: {
         height:55,
-        backgroundColor: "red",
+        backgroundColor: "purple",
         flexDirection: "row",
         justifyContent: "space-between",
         padding: 10
