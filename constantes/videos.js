@@ -1,5 +1,5 @@
-const videos = [
-    {id:0, categoriesID: 0, titre: "Titre1", description:"bla bla", image: "URL", tendances:0, date:"01/10/2022"},
+export const videos = [
+    // {id:0, categoriesID: 0, titre: "Titre1", description:"bla bla", image: source={require('../images/aqviews-mfWsMDdN-Ro-unsplash.jpg'), tendances:0, date:"01/10/2022"},
     {id:1, categoriesID: 1, titre: "Titre2", description:"bla bla", image: "URL", tendances:1, date:"02/10/2022"},
     {id:2, categoriesID: 2, titre: "Titre3", description:"bla bla", image: "URL", tendances:0, date:"03/10/2022"},
     {id:3, categoriesID: 3, titre: "Titre4", description:"bla bla", image: "URL", tendances:1, date:"04/10/2022"},
