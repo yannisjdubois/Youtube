@@ -9,15 +9,15 @@ const mini = ({item}) => {
     //     <Text>{item.titre}</Text>
     // </View>
 
-    <Card style={{position:"relative",alignItems:"center"}}>
+    <View style={{position:"relative",alignItems:"center"}}>
       <Image
           style={{width:150,height:100}}
-          resizeMode="contain"
-          // source={require('')}
+          resizeMode="cover"
+          source={item.image}
         />
       <Card.Divider/>
       <Card.Title>{item.titre}</Card.Title>
-    </Card>
+    </View>
   )
 }
 
