@@ -5,18 +5,29 @@ import Trends from './Components/Trends';
 import Content from './Components/Content';
 import Bleu from './Exercices/Bleu';
 import Rouge from './Exercices/Rouge';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Home from './Components/Home';
+import Details from './Components/Details';
+
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
 
     <View style={styles.content} >
+        {/* <Text style={styles.txt}>Yannis</Text>
+        <Bleu/>
+        <Rouge/> */}
       <Header/>
       <Trends/>
       <Content/>
-      {/* <Text style={styles.txt}>Yannis</Text>
-      <Bleu/>
-      <Rouge/> */}
 
+        <NavigationContainer>
+          <Stack.Navigator>
+            <Stack.Screen name="Home" component={Home} />
+          </Stack.Navigator>
+        </NavigationContainer>
 
     </View>
   )

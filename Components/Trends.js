@@ -7,17 +7,19 @@ import Mini from './Cards/mini'
 
 const Trends = () => {
   return (
+        <View>
+            <FlatList
+            style={styles.flat}
+            horizontal
+            data={videos}
+            renderItem={({item}) => (
 
-        <FlatList
-        style={styles.flat}
-        horizontal
-        data={videos}
-        renderItem={({item}) => (
+                <Mini item={item} />
+            )}
+            keyExtractor={item => item.id}
+            />
+        </View>
 
-            <Mini item={item} />
-        )}
-        keyExtractor={item => item.id}
-        />
 
   )
 }
