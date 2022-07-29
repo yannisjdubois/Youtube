@@ -28,11 +28,6 @@ const Content = () => {
 
 
       <View>
-        {/* <Text>
-            qqch
-            
-        </Text> */}
-
           <FlatList
             style={styles.videosmax}
             data={videos}
