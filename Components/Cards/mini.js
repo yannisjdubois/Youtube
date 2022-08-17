@@ -1,8 +1,12 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import React from 'react'
 import { Card, Image } from "@rneui/themed";
+import { useNavigation } from '@react-navigation/native';
 
 const mini = ({item}) => {
+
+  const navigation = useNavigation();
+
   return (
     // <View style={styles.minicard}>
     //     <Text>{item.image}</Text>
@@ -10,11 +14,19 @@ const mini = ({item}) => {
     // </View>
 
     <View style={{position:"relative",alignItems:"center"}}>
-      <Image
+
+      <TouchableOpacity
+        style={styles.item}
+        onPress={() => navigation.navigate('Details')}
+      >
+        <Image
           style={{width:150,height:100}}
           resizeMode="cover"
           source={item.image}
         />
+      </TouchableOpacity>
+
+
       <Card.Divider/>
       <Card.Title>{item.titre}</Card.Title>
     </View>
