@@ -2,7 +2,7 @@ import { ImageBackground, StyleSheet, Text, View, TouchableOpacity } from 'react
 import React from 'react'
 import { Card, Image } from "@rneui/themed";
 import { useNavigation } from '@react-navigation/native';
-import ReactPlayer from 'react-player'
+
 
 const maxi = ({item}) => {
 

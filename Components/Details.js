@@ -1,14 +1,22 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, Button } from 'react-native'
 import React from 'react'
-import ReactPlayer from 'react-player/youtube'
+import { Image } from "@rneui/themed";
 
-const Details = () => {
+
+const Details = ({item}) => {
   return (
     <View>
-      <Text>Details</Text>
+        <Image
+          style={{width:350,height:200}}
+          resizeMode="cover"
+          // source={item.image}
+        />
+      <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</Text>
+      <Button
+              title={"Lire"}
+              onPress={""}
+            />
 
-
-      {/* <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' /> */}
 
     </View>
     
@@ -17,4 +25,7 @@ const Details = () => {
 
 export default Details
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+
+  
+})
