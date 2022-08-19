@@ -11,7 +11,7 @@ const Details = ({ route, navigation }) => {
     <View style={styles.detailsview}>
         <Image
           style={styles.videoselect}
-          style={{width:350,height:200}}
+          // style={{width:350,height:200}}
           resizeMode="cover"
           source={item.image}
         />
@@ -53,9 +53,10 @@ const Details = ({ route, navigation }) => {
 export default Details
 
 const styles = StyleSheet.create({
-  // videoselect: {
-  //   margin: 50
-  // },
+  videoselect: {
+    width:350,
+    height:200
+  },
 
   detailsview: {
     margin: 25,
