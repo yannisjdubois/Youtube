@@ -9,10 +9,6 @@ const Index = ({navigation}) => {
     <View style={styles.header}>
             <Icon name="menu" color="white" size={35} />
             <Icon name="search" color="white" size={35}/>
-            <Button
-              title="Details"
-              onPress={() => navigation.navigate('Details')}
-      />
     </View>
 
   )
