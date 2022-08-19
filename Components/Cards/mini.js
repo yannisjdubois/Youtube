@@ -17,7 +17,7 @@ const mini = ({item}) => {
 
       <TouchableOpacity
         style={styles.item}
-        onPress={() => navigation.navigate('Details')}
+        onPress={() => navigation.navigate('Details', {item: item}) }
       >
         <Image
           style={{width:150,height:100}}

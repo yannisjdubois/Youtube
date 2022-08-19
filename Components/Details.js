@@ -1,23 +1,48 @@
 import { StyleSheet, Text, View, Button } from 'react-native'
 import React from 'react'
-import { Image } from "@rneui/themed";
+import { Image, Icon } from "@rneui/themed";
 
 
-const Details = ({item}) => {
+const Details = ({ route, navigation }) => {
+  const { item } = route.params;
+  console.log (item)
+
   return (
-    <View>
+    <View style={styles.detailsview}>
         <Image
           style={styles.videoselect}
           style={{width:350,height:200}}
           resizeMode="cover"
-          // source={item.image}
+          source={item.image}
         />
+        <View style={styles.icons}>
+          <Icon
+          raised
+          name='like1'
+          type='antdesign'
+          color='black'
+          onPress={() => console.log('hello')} />
+          <Icon
+          raised
+          name='dislike1'
+          type='antdesign'
+          color='black'
+          onPress={() => console.log('hello')} />
+          <Icon
+          raised
+          name='share-a'
+          type='fontisto'
+          color='black'
+          onPress={() => console.log('hello')} />
+          <Icon
+          raised
+          name='list'
+          type='font-awesome'
+          color='black'
+          onPress={() => console.log('hello')} />
+        </View>
+
       <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</Text>
-      <Button
-              style={styles.boutonlecture}
-              title={"Lire"}
-              onPress={""}
-            />
 
 
     </View>
@@ -32,8 +57,15 @@ const styles = StyleSheet.create({
   //   margin: 50
   // },
 
-  boutonlecture: {
-    margin: 100
-  }
+  detailsview: {
+    margin: 25,
+  },
+
+  icons: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-around'
+
+  },
 
 })

@@ -13,7 +13,7 @@ const maxi = ({item}) => {
 
       <TouchableOpacity
       style={styles.item}
-      onPress={() => navigation.navigate('Details')}
+      onPress={() => navigation.navigate('Details', {item: item}) }
       >
         <Image
           style={{width:350,height:100}}

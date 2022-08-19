@@ -14,9 +14,10 @@ const App = () => {
     <NavigationContainer>
     <Stack.Navigator screenOptions={{headerShown:false}}>
 
+      <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="Details" component={Details} />
       <Stack.Screen name="DetailsVideos" component={DetailsVideos} />
-      <Stack.Screen name="Home" component={Home} />
+
 
     </Stack.Navigator>
     </NavigationContainer>
