@@ -15,7 +15,7 @@ const Details = ({ route, navigation }) => {
           resizeMode="cover"
           source={item.image}
         />
-        <View style={styles.icons}>
+        <View style={styles.horizontal}>
           <Icon
           raised
           name='like1'
@@ -41,8 +41,15 @@ const Details = ({ route, navigation }) => {
           color='black'
           onPress={() => console.log('hello')} />
         </View>
+        
+      <View style={styles.horizontal}>
+        <Text style={styles.titredate}>{item.titre}</Text>
+        <Text style={styles.titredate}>{item.date}</Text>
+      </View>
 
       <Text></Text>
+      
+      <Text>{item.description}</Text>
 
 
     </View>
@@ -62,11 +69,15 @@ const styles = StyleSheet.create({
     margin: 25,
   },
 
-  icons: {
+  horizontal: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-around'
 
+  },
+
+  titredate: {
+    fontWeight: '700'
   },
 
 })
